@@ -1,9 +1,13 @@
+from textSummarizer.pipeline.stage_01_data_ingestion import DataIngestionTrainPipeline
 from textSummarizer.logging import logger
-from textSummarizer.utils.common import get_size
 
-path = 'src/textSummarizer/utils/common.py'
-print ('size of ', path, 'file is :', get_size (path))
-
-logger.info ( f"Getting size of {path}" )
-
+STAGE_NAME = "Data_Ingestion_stage"
+try:
+    logger.info ( f">>>>> stage {STAGE_NAME} started <<<<<" )
+    data_ingestion = DataIngestionTrainPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>> stage {STAGE_NAME} completed <<<<<\n\nx=========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
