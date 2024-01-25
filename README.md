@@ -1,5 +1,8 @@
 # Text-summarization-NLP-project-
 
+End to end NLP project using HagginFace's transformers with deployment using github action, MLOps and CI/CD piplines.
+
+
 ## Workflows
 the pipeline you should follow
 
